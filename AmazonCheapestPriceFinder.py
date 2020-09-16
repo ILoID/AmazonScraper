@@ -35,6 +35,6 @@ for price in price_tags:
 
 # Get the smallest price and click on it
 smallest_price = str(min(values)).replace('.', ',')
-smallest = driver.find_element_by_xpath(f"//*[contains(text(), '{smallest_price}')]")
-get_the_best = ActionChains(driver)
-get_the_best.move_to_element(smallest).click().perform()
+smallest_price_element = driver.find_element_by_xpath(f"//*[contains(text(), '{smallest_price}')]")
+click_best = ActionChains(driver)
+click_best.move_to_element(smallest_price_element).click().perform()
